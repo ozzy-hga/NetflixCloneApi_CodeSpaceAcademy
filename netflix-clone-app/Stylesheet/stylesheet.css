@@ -1,0 +1,97 @@
+/* Global Styles */
+:root {
+	--primary-color: #e50914;
+	--dark-color: #141414;
+	--light-color: #f4f4f4;
+}
+.body {
+	background-color: #141414;
+	font-family: bebas Neue;
+	font-size: 30px;
+}
+/* .app {
+	display:flex;
+	justify-content: center;
+} */
+.row1 {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+}
+
+.fa-solid {
+	color: white;
+}
+
+.h1 {
+	color: #f4f4f4;
+	font-family: bebas Neue;
+	font-size: 100px;
+}
+
+.hero-text {
+	justify-content: flex-end;
+	position: absolute;
+	
+}
+
+.btn-primary {
+	color: white;
+	background-color: red !important;
+	font-weight: 700 !important;
+	border-color: transparent !important;
+	width: fit-content !important;
+	font-size: 95% !important;
+
+}
+
+.btn-primary:hover {
+	color: rgb(255, 0, 0) !important;
+	background-color: white !important;
+	font-weight: 700 !important;
+	border-color: transparent !important;
+}
+
+/* New CSS rule I created to display movies in Grid */
+.movie-list {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	
+
+}
+.movie-list * {
+	margin: 0.25rem;
+	padding-bottom: 10px;
+} 
+
+.movie {
+	display: grid;
+	/* justify-content: center; */
+}
+
+.a{
+	background-color: white;
+	width: 500px;
+	height: 500px;
+	color: black;
+}
+
+.text-dark {
+	/* text-align: center !important; */
+	color: white !important;
+	padding-bottom: 5px;
+
+}
+
+.text-white {
+	padding-top: 5% !important;
+	padding-bottom: 2% !important;
+}
+
+
+#watchlist-app {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	
+}
+

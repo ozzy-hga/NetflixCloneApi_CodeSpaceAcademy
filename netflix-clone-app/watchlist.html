@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My List</title>
+
+    <!-- Vue CDN link -->
+    <!-- Version : 2.6.14 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+    <link rel="stylesheet" href="./Stylesheet/stylesheet.css">
+
+    <!-- Bootstrap CDB -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/headers/">
+
+    <!--Bootstrap core CSS-->
+    <link href="./Stylesheet/GlobalStyleBootstrap.css" rel="stylesheet">
+
+    <!--Neflix font-->
+    <script src="https://kit.fontawesome.com/ea5590c524.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="container bg-dark">
+
+    <!-- Main Container Element for Vue Instance -->
+    <div>
+
+        <header class="p-3 bg-dark text-white">
+
+            <div>
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                            <use xlink:href="#bootstrap" />
+                        </svg>
+                    </a>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" width="90"
+                        height="60" alt="Netflix" class="headerLogo">
+
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        <li><a href="./index.html" class="nav-link px-2 text-secondary">Home</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">TV Shows</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">Movies</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">New & Popular</a></li>
+                        <li><a href="./watchlist.html" class="nav-link px-2 text-white">My List</a></li>
+                    </ul>
+
+
+                </div>
+            </div>
+
+        </header>
+
+        <div>
+            <h1 class="text-white">My List</h1>
+        </div>
+
+        <!-- Link this template to different Vue instance -->
+        <div id="watchlist-app" class="bg-dark">
+            
+            <div class=" w-nav">
+                <input type="search" id="form1" v-bind="searchbar" class="fa-solid fa-magnifying-glass" placeholder='search...' />
+            </div>
+
+            <div class="movie-list">
+
+                <!-- Copied this card element from index.html -->
+                <div class="movie-list bg-dark">
+                    <div v-for="movie in watchList">
+                        <img :src="movie.img" height="250" width="200" />
+                        <div class="movie">
+                        <h5 class="text-dark"> {{movie.title}} </h5>
+                        <button class="btn btn-primary" v-on:click="deleteFromWatchlist(movie)">Remove</button>
+                        </div>          
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./components/watchlist.js"></script>
+
+</body>
+
+</html>
